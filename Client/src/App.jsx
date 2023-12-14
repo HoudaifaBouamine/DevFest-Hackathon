@@ -1,25 +1,35 @@
-<<<<<<< HEAD
-// src/App.js
-import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import BigCTA_Button from "./compenenet/SecondaryButtonIcon"
-import NavBar from './compenenet/navBar'; 
-const App = () => {
-  return (
-    <>
-    <NavBar/>
-    </>
-  );
-=======
-import Login from './Login/Login'
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
 function App() {
+  const [count, setCount] = useState(0)
+
   return (
-    <div>
-      <Login />
-    </div>
+    <>
+      <div>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
   )
->>>>>>> fcc1c9c6845577d1369d3d848d55b5e260bb2109
 }
 
-export default App;
+export default App
