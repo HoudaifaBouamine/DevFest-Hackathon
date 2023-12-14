@@ -1,11 +1,7 @@
-import Login from './Login/Login'
+import Login from './logtest/log.jsx'
 
 function App() {
-  return (
-    <div>
-      <Login />
-    </div>
-  )
+  return <Login />
 }
 
 export default App

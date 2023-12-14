@@ -3,3 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background: #F3F4F6;
+  font-family: Nunito;
+}
