@@ -1,9 +1,14 @@
-function App() {
+// src/App.js
+import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import BigCTA_Button from "./compenenet/SecondaryButtonIcon"
+import NavBar from './compenenet/navBar'; 
+const App = () => {
   return (
-    <div>
-<h1>sfkljdk</h1>
-    </div>
-  )
+    <>
+    <NavBar/>
+    </>
+  );
 }
 
-export default App
+export default App;
