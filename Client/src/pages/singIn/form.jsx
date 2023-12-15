@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import "./style/LogInForm.css"
-import InputField from '../../compenenet/InputField'
-import GoogleButton from '../../compenenet/SecondaryButtonIcon'
-import CTA_button from '../../compenenet/BigCTA_Button'
+import InputField from '../compenenet/InputField'
+import GoogleButton from '../compenenet/SecondaryButtonIcon'
+import CTA_button from '../compenenet/BigCTA_Button'
 import icon from "../../assets/googleIcon.svg"
-import "../../compenenet/styles.css"
-import { API_URL } from '../../compenenet/urll'
+import "../compenenet/styles.css"
+import { API_URL } from '../compenenet/urll'
 import { Navigate } from 'react-router-dom'
 
 const LogInForm =  () => {
@@ -57,7 +57,7 @@ const LogInForm =  () => {
   </section>
   <GoogleButton text={"Continue with Google"} Icon={icon}></GoogleButton>
   <div className='noAccount'>
-  <p className='noAccountParagraph'>Don’t have an account</p>
+  <p className='noAccountParagraph'>Don't have an account</p>
  <a className='noAccountParagraph2'>Log In</a>
   </div>
     </div>

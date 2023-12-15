@@ -1,8 +1,12 @@
-import './postdetail.css'
-import avatar from './image.jpg'
-import { useEffect , useState } from 'react'
+import './Homepage/postdetail.css'
+import { useParams } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import avatar from './Homepage/image.jpg'
 
 export default function() {
+
+  let {id} = useParams()
+  console.log(id)
   
   let [ideas,setIdeas] = useState([])
 
@@ -16,7 +20,11 @@ export default function() {
   []
   )
 
-  let items = ideas.map ( item => (
+  let items = ideas.filter(
+    item => item.suggester.user_Id === id
+  )
+
+  items = items.map ( item => (
     <li key={item.idea_Id} className='post'>
     <div className='owner'>
       <img className='avatar' src={avatar} />
@@ -32,10 +40,10 @@ export default function() {
       </div>
       <h1>{item.title}</h1>
       <p>
-      Imagine a web app designed to tackle bullying head-on. 💻✨ Picture a safe online space where users can access resources, report incidents, and find support. 🌈🤝 Together, we can create a virtual community that stands up to bullying!
+      {item.description}
       </p>
       <div className='tags'>
-      <a>Start</a>
+      <a>Contact user</a>
       </div>
       </li>
   ) )
@@ -45,5 +53,7 @@ export default function() {
       {items}
     </ul>
   )
+
+
 
 }

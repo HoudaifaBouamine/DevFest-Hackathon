@@ -1,11 +1,11 @@
 import React,{useState} from 'react'
 import "./style/singForMember.css"
-import InputField from '../../compenenet/InputField'
-import GoogleButton from '../../compenenet/SecondaryButtonIcon'
-import CTA_button from '../../compenenet/BigCTA_Button'
+import InputField from '../compenenet/InputField'
+import GoogleButton from '../compenenet/SecondaryButtonIcon'
+import CTA_button from '../compenenet/BigCTA_Button'
 import icon from "../../assets/googleIcon.svg"
-import "../../compenenet/styles.css"
-import { API_URL } from '../../compenenet/urll'
+import "../compenenet/styles.css"
+import { API_URL } from '../compenenet/urll'
 import { Navigate } from 'react-router-dom'
 
   
