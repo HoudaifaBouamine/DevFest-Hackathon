@@ -11,7 +11,7 @@ const SingInPage = () => {
       </div>
       <div className="color-side">
        
-      <LogInForm></LogInForm>
+      <LogInForm />
       </div>    
       </div>
   </div>
