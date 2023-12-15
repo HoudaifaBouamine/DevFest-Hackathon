@@ -1,11 +1,11 @@
 .panel {
-height: 613px;
+height: 550px;
 padding: 24px;
 border-radius: 12px;
 background: #FFF;
 position: fixed;
-top: 105px;
-right: 10px;
+top: 90px;
+right: 30px;
 width: 35%;
 }
 

@@ -7,4 +7,5 @@
 body {
   background: #F3F4F6;
   font-family: Nunito;
+  overflow: scroll;
 }
