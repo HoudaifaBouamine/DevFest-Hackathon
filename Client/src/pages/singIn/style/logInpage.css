@@ -6,13 +6,13 @@ body {
 
 .split-container {
     display: flex;
-    height: 644px;
-    width: 1280px;  
+    height: 610px;
 }
 
 .color-side {
     background: var(--gray-100, #F3F4F6);
     flex: 1;
+    width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -20,10 +20,9 @@ body {
 }
 
 .image-side {
-    width: 724px;
+    width: 50%;
     height: 644px;
-   /* background: url('../assets/backgroundLEFT.svg') center/cover no-repeat;*/
-   background: #FFF;
+    background: #FFF;
 }
 
 
