@@ -1,0 +1,120 @@
+*{
+    margin:0; 
+    padding: 0;
+}
+.page{
+    display: inline-flex;
+    padding: 78px 401px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.Hero-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    background: #FFF;
+}
+.tite{
+    color: #111827;
+    text-align: center;
+    /* h3 */
+    font-family: Nunito;
+    font-size: 39.06px;
+    font-style: normal;
+    font-weight: 700  ;
+    line-height: normal;
+    text-transform: capitalize;
+
+}
+.input-field{
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+}
+.input-field1{
+    display: flex;
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
+    border-radius: 12px;
+background: #FFF;
+
+/* Drop Down */
+box-shadow: 0px 8px 32px 0px rgba(17, 17, 26, 0.05), 0px 4px 16px 0px rgba(17, 17, 26, 0.05);
+}
+.input-field2{
+    display: flex;
+padding: 12px;
+flex-direction: column;
+align-items: flex-start;
+gap: 36px;
+border-radius: 12px;
+background: #FFF;
+
+/* Drop Down */
+box-shadow: 0px 8px 32px 0px rgba(17, 17, 26, 0.05), 0px 4px 16px 0px rgba(17, 17, 26, 0.05);
+}
+.inside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 92px;
+}
+
+.img{
+    width: 41px;
+height: 35px;
+
+}
+input{
+   
+    accent-color: #00BFFF;
+    width: 24px;
+height: 24px;
+}
+
+.big-CTA-button{
+    
+    width : 185px;
+    background-color: #00BFFF;
+  }
+  
+  .big-CTA-button:hover {
+    background: rgba(0, 191, 255, 1);
+  }
+  
+  
+  .big-CTA-button:active {
+    border-radius: 12px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.24) 100%), #00BFFF;
+    /* Focus Effect */
+    box-shadow: 0px 2px 16px 0px rgba(70, 102, 255, 0.50);
+  }
+.parag{  
+  color: #111827;
+
+/* medium text */
+font-family: Nunito;
+font-size: 12.8px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.span{
+    color: #00BFFF;
+
+/* medium text */
+font-family: Nunito;
+font-size: 12.8px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.paragraphs{
+    display: flex;
+align-items: flex-start;
+gap: var(--borderRadius, 4px);
+}
