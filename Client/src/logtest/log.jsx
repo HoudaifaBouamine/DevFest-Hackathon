@@ -22,6 +22,24 @@ function Horizontal() {
   
   }
 
+  function handleclick(e) {
+    e.preventDefault()
+    let nom = document.getElementById('Ful').value
+    let email = document.getElementById('Ema').value
+    let password = document.getElementById('Pas').value
+
+    fetch("https://cd50-154-121-47-102.ngrok-free.app/login" , {
+        method : 'post',
+        body : JSON.stringify({   
+          "email" : "john.doe@example.com",
+          "password" : "123"
+      }),
+        headers : new Headers( { 'ngrok-skip-browser-warning' : '1', 'content-type' : 'application/json' } )
+      })
+    .then( result => result.json() )
+    .then ( result => console.log(result))
+  }
+
 export default function() {
 
   return (
@@ -32,7 +50,7 @@ export default function() {
       <Inputfield label='Full name' />
       <Inputfield label='Email' />
       <Inputfield label='Password' />
-      <input className='submit' type='submit' value='Sign up'></input>
+      <input className='submit' type='submit' value='Sign up' onClick={handleclick}></input>
       </form>
       <Horizontal />
       <button classN><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
