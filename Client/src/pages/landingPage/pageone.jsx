@@ -10,17 +10,21 @@ import frame1 from "./assets/Frame-1.svg"
 import frame from "./assets/Frame.svg"
 import stare from "./assets/stare shape.svg"
 import Hero from "./assets/Mask group.svg"
+import Pagetwo from "./pagetwo"
 const pageone = () => {
   return (
-    <div>
-    <div className='Hero-page'>
+   
+    <div className='section1'>
       <NavBar/>
       <img src={stare} className='stare' />
       <img src={Ellipse172} className='Ellipse172'/>
       <img src={Ellipse170} className='Ellipse170'/>
       <img src={Ellipse171} className='Ellipse171'/>
+      <img src={Ellipse167} className='Ellipse167'/>
+      <img src={Ellipse168} className='Ellipse168'/>
+      <img src={frame1} className='framll'/>
       
-  <div className='heroPage'>
+  <div className='heroPage1'>
   <div className='hero-text'>
             <h1 className='hero-text1'>Develop <span className='hero-text2'> Peaceful</span> Solutions</h1>
             <p className='hero-paragraph1'>Collaborate, Donate, and Share Your Ideas! Be a Developer and Contribute to Projects for Peace</p>        
@@ -28,8 +32,10 @@ const pageone = () => {
           </div>
           <img src={Hero} className='hero-imag'></img>
         </div>
+      
     </div>
-    </div>
+  
+ 
   )
 }
 
