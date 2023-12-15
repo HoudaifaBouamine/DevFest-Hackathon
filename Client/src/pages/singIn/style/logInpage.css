@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;    
+}
+
+.split-container {
+    display: flex;
+    height: 644px;
+    width: 1280px;  
+}
+
+.color-side {
+    background: var(--gray-100, #F3F4F6);
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-side {
+    width: 724px;
+    height: 644px;
+   /* background: url('../assets/backgroundLEFT.svg') center/cover no-repeat;*/
+   background: #FFF;
+}
+
+
+
+.hero-title{
+    position: absolute;
+    top: 66px;
+    left:55px;
+    width: 567px;
+height: 110px;
+flex-shrink: 0;
+color: #FFF;
+font-family: Nunito;
+font-size: 39.06px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+letter-spacing: 2.344px;
+text-transform: uppercase;
+}
+.hero-title1{
+    position: absolute;
+    top:525px ; 
+    left:55px;
+ 
+    color: #FFF;
+  
+    /* Title Small */
+    font-family: Nunito;
+    font-size: 31.25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.TheX{
+    width: 100.358px;
+height: 101.851px;
+flex-shrink: 0;
+position: absolute;
+left: 685px;
+}
+.Vector{
+    position: absolute;
+    left: 672px;
+    top:500px;
+}
+.Sagittarius{
+    position:absolute;
+    left: 740px;
+    top:470px;
+    
+}
+.LogInForm{
+        position: absolute;
+       bottom: 30px;
+        z-index: 2;
+}
