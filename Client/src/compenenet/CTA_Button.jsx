@@ -1,9 +1,9 @@
 import React from 'react'
 import './styles.css'
 
-const CTA_button = ({text,onclick}) => {
+const CTA_button = ({text}) => {
   return (
-       <button onClick={onclick} className='CTA-button'>{text} </button>
+       <button className='CTA-button'>{text} </button>
   )
 }
 export default CTA_button

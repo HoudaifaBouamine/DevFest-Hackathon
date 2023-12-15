@@ -4,13 +4,13 @@ import LogInForm from "./form"
 const SingInPage = () => {
   return (
     <div>
-      <div class="split-container"> 
-      <div class="image-side">
+      <div className="split-container"> 
+      <div className="image-side">
 
         <h1 className='hero-title'>Hear from experienced individuals</h1>
         <h1 className='hero-title1'>LOGO</h1>
       </div>
-      <div class="color-side">
+      <div className="color-side">
        
       <LogInForm></LogInForm>
       </div>    

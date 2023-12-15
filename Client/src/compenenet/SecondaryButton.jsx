@@ -1,9 +1,9 @@
 import React from 'react'
 import './styles.css'
 
-const SecondaryButton = ({text,onclick}) => {
+const SecondaryButton = ({text}) => {
   return (
-      <button onClick={onclick}  className='secondary-button'>{text}</button>
+      <button  className='secondary-button'>{text}</button>
   )
 }
 
