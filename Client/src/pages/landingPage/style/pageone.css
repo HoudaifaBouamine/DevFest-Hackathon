@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin:0;
+}
+.stare{
+    position: absolute;
+    width: 110px;
+height: 128px;
+    left:37rem;
+    top:6rem;
+    display: flex;
+   
+}
+.Ellipse172{
+    position:absolute;
+    left: 20rem;
+    bottom: 10rem;
+    z-index: 1;
+
+}
+
+  .heroPage{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:20px;
+    height: 660px
+ 
+  }
+  .CTA-button{
+         
+    padding: 0.75rem 1.5rem;
+    background: #00BFFF;
+    
+  }
+
+  .CTA-button:hover{
+    background: rgba(0, 191, 255, 1);
+  }
+  
+  
+ .CTA-button:active{
+    border-radius: 12px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.24) 100%), #00BFFF;
+    /* Focus Effect */
+    box-shadow: 0px 2px 16px 0px rgba(70, 102, 255, 0.50);
+  }
+.hero-imag{
+    padding:0px;
+    padding-top:5rem ;
+    scale:0.7;
+    margin-right:-5.55rem ;
+}
+.hero-text1{
+    color: #000;
+
+/* h1 */
+font-family: Nunito;
+font-size: 61.04px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+text-transform: capitalize;
+
+}
+.hero-text2{
+    color: #00BFFF;
+
+/* h1 */
+font-family: Nunito;
+font-size: 61.04px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+text-transform: capitalize;
+}
+.hero-paragraph1{
+    color: #6B7280;
+
+/* h5 */
+font-family: Nunito;
+font-size: 25px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+width: 480px;
+height: 92px;
+flex-shrink: 0;
+}
+.hero-text{
+    
+    display: flex;
+    padding-left: 88px;
+    height: 30;
+    gap:1.5rem;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.Ellipse170{
+position: absolute;
+right:0;
+top:6.5rem;
+width:365px;
+height:500px ;
+}
+.Ellipse171{
+    position: absolute;
+    z-index:-10 ; 
+    top: 5rem;
+    right:0;
+    width:450px;
+height:500px ;
+}
