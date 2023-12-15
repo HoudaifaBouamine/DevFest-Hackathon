@@ -3,6 +3,7 @@
     public class Idea
     {
         public Guid Idea_Id { get; set; }
+        public Guid Suggester_Id { get; set; }
         public string Title { get; set; } = "";
         public string Description { get; set; } = "";
         public string Status { get; set; } = "";
@@ -28,11 +29,13 @@
             Title = createDto.Title;
             Description = createDto.Description;
             Status = createDto.Status;
+            Suggester_Id = createDto.Suggester_Id;
         }
     }
 
     public class IdeaCreateDto
     {
+        public Guid Suggester_Id { get; set; }
         public string Title { get; set; } = "";
         public string Description { get; set; } = "";
         public string Status { get; set; } = "";
@@ -43,6 +46,7 @@
     public class IdeaReadDto
     {
         public Guid Idea_Id { get; set; }
+        public UserReadDto Suggester { get; set; }
         public string Title { get; set; } = "";
         public string Description { get; set; } = "";
         public string Status { get; set; } = "";
@@ -58,6 +62,7 @@
             Title = idea.Title;
             Description = idea.Description;
             Status = idea.Status;
+            Suggester = (from u in users where u.User_Id == idea.Suggester_Id select new UserReadDto(u)).FirstOrDefault() ;
 
             Project = (from p in projects 
                        where p.Idea_Id == idea.Idea_Id 

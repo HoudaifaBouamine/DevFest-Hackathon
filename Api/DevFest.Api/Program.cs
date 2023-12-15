@@ -695,6 +695,7 @@ var ideas = new List<Idea>()
         Title = "Conflict Resolution App",
         Description = "Develop a mobile or web application that provides tools and resources for conflict resolution, mediation, and peaceful dialogue.",
         Status = "In Progress",
+        Suggester_Id = users[0].User_Id
     },
     new Idea
     {
@@ -702,7 +703,7 @@ var ideas = new List<Idea>()
         Title = "Digital Peace Garden",
         Description = "Create a virtual space where users can plant 'seeds of peace' by sharing positive messages, artwork, and stories promoting unity and understanding.",
         Status = "Idea",
-
+        Suggester_Id = users[3].User_Id
     },
     new Idea
     {
@@ -710,7 +711,7 @@ var ideas = new List<Idea>()
         Title = "Peace Education Platform",
         Description = "Build an online platform offering courses and educational materials focused on peace studies, conflict resolution, and global citizenship.",
         Status = "Idea",
-
+        Suggester_Id = users[2].User_Id
     },
     new Idea
     {
@@ -718,7 +719,7 @@ var ideas = new List<Idea>()
         Title = "Community Building App",
         Description = "Develop a social networking app that connects individuals from different backgrounds to foster understanding, dialogue, and community building.",
         Status = "Idea",
-
+        Suggester_Id = users[0].User_Id
     },
     new Idea
     {
@@ -726,7 +727,7 @@ var ideas = new List<Idea>()
         Title = "Virtual Reality for Empathy",
         Description = "Utilize virtual reality technology to create immersive experiences that promote empathy and understanding by allowing users to see the world through others' perspectives.",
         Status = "Idea",
-
+        Suggester_Id = users[1].User_Id
     },
     new Idea
     {
@@ -734,7 +735,7 @@ var ideas = new List<Idea>()
         Title = "Crowdsourced Peace Initiatives",
         Description = "Build a platform where people can propose and collaborate on grassroots peace initiatives, and others can support and contribute to these projects.",
         Status = "Idea",
-
+        Suggester_Id = users[3].User_Id
     },
     new Idea
     {
@@ -742,7 +743,7 @@ var ideas = new List<Idea>()
         Title = "Human Rights Monitoring App",
         Description = "Create an app that allows users to report human rights violations, discrimination, and injustice, raising awareness and facilitating action.",
         Status = "Idea",
-
+        Suggester_Id = users[2].User_Id
     },
     new Idea
     {
@@ -750,7 +751,7 @@ var ideas = new List<Idea>()
         Title = "Online Conflict Journalism Hub",
         Description = "Develop a platform that curates and disseminates unbiased, in-depth journalism focused on global conflicts and peacebuilding efforts.",
         Status = "Idea",
-
+        Suggester_Id = users[4].User_Id
     },
     new Idea
     {
@@ -758,7 +759,7 @@ var ideas = new List<Idea>()
         Title = "Digital Storytelling for Peace",
         Description = "Build a website or app where individuals can share personal stories related to peace, tolerance, and overcoming adversity.",
         Status = "Idea",
-
+        Suggester_Id = users[1].User_Id
     },
     new Idea
     {
@@ -766,7 +767,7 @@ var ideas = new List<Idea>()
         Title = "Peaceful Gaming Platform",
         Description = "Develop video games that promote conflict resolution, cooperation, and empathy, providing an engaging way to impart peace-related values.",
         Status = "Idea",
-
+        Suggester_Id = users[0].User_Id
     },
     new Idea
     {
@@ -774,7 +775,7 @@ var ideas = new List<Idea>()
         Title = "Language Translation for Peace",
         Description = "Create a language translation tool that focuses on promoting accurate and culturally sensitive communication to bridge language gaps and foster understanding.",
         Status = "Idea",
-
+        Suggester_Id = users[0].User_Id
     },
     new Idea
     {
@@ -782,7 +783,7 @@ var ideas = new List<Idea>()
         Title = "Peaceful Community Events Calendar",
         Description = "Build an online calendar highlighting local and global events related to peace, encouraging participation and engagement.",
         Status = "Idea",
-
+        Suggester_Id = users[3].User_Id
     },
     new Idea
     {
@@ -790,7 +791,7 @@ var ideas = new List<Idea>()
         Title = "Global Conflict Analysis Dashboard",
         Description = "Develop a data visualization platform that analyzes global conflict trends, providing insights into areas that require attention for peacebuilding efforts.",
         Status = "Idea",
-
+        Suggester_Id = users[2].User_Id
     },
     new Idea
     {
@@ -798,7 +799,7 @@ var ideas = new List<Idea>()
         Title = "Peaceful Coexistence Mapping",
         Description = "Create a mapping tool that visually represents instances of peaceful coexistence and collaboration among diverse communities globally.",
         Status = "Idea",
-
+        Suggester_Id = users[3].User_Id
     },
     new Idea
     {
@@ -806,7 +807,7 @@ var ideas = new List<Idea>()
         Title = "Virtual Peace Summit Platform",
         Description = "Develop a virtual space for hosting peace summits, conferences, and dialogues, bringing together experts, policymakers, and advocates from around the world.",
         Status = "Idea",
-
+Suggester_Id = users[3].User_Id
     },
     new Idea
     {
@@ -814,7 +815,7 @@ var ideas = new List<Idea>()
         Title = "Mindfulness and Meditation App",
         Description = "Create an app that offers guided mindfulness and meditation exercises to promote inner peace and stress reduction.",
         Status = "Idea",
-
+        Suggester_Id = users[2].User_Id
     },
     new Idea
     {
@@ -822,7 +823,7 @@ var ideas = new List<Idea>()
         Title = "Blockchain for Peace",
         Description = "Explore the use of blockchain technology for transparent and accountable fundraising for peace initiatives, ensuring that funds reach their intended recipients.",
         Status = "Idea",
-
+        Suggester_Id = users[1].User_Id
     }
 };
 
@@ -1575,6 +1576,11 @@ app.MapGet("/ideas/{idea_Id}", (Guid idea_Id) =>
 
 app.MapPost("/ideas", ([FromBody] IdeaCreateDto idea) =>
 {
+    if (users.Where(u=>u.User_Id == idea.Suggester_Id).Count() == 0)
+    {
+        return Results.BadRequest("Failed to create idea because the User is not found (user guid is wrong)");
+    }
+
     var createdIdea = new Idea(idea);
     ideas.Add(createdIdea);
 
@@ -1675,6 +1681,8 @@ app.MapPost("/helps", ([FromBody] HelpCreateDto helpCreateDto) =>
 
     return Results.Ok( new HelpReadDto(createdHelp,helpHaveTags,tags) );
 });
+
+
 IdeaReadDto? GetIdeaReadDto(Idea idea)
 {
     return Idea.IdeasToDtos(ideas, projects, userInProjects,
@@ -1683,7 +1691,6 @@ IdeaReadDto? GetIdeaReadDto(Idea idea)
         .Where(i => i.Idea_Id == idea.Idea_Id)
         .FirstOrDefault();
 }
-
 List<ProjectReadDto> GetProjectsReadDtos()
 {
     return  (from p in projects
