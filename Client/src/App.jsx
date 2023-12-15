@@ -1,11 +1,15 @@
-import SingIn from "./pages/singIn/singInPage.jsx"
+import { BrowserRouter, Routes, Route } from "react-router-dom" 
 
 import SingForMember from "./pages/singupPage/singForMember.jsx"
+
+
 function App() {
   return (
-  <div>
- <SingForMember/>
-  </div>
+    <BrowserRouter>
+    <Routes></Routes>
+    <Route></Route>
+    <Route></Route>
+    </BrowserRouter>
   )
 }
 
