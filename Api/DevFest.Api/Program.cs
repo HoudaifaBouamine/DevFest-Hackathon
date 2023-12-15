@@ -1205,6 +1205,30 @@ var helpHaveTags = new List<XHaveTag>
         X_Id = helps[1].Help_Id,
         Tag_Id = tags[2].Tag_Id
     },
+    new XHaveTag()
+    {
+        XHaveTag_Id = Guid.NewGuid(),
+        X_Id = helps[2].Help_Id,
+        Tag_Id = tags[1].Tag_Id
+    },
+    new XHaveTag()
+    {
+        XHaveTag_Id = Guid.NewGuid(),
+        X_Id = helps[2].Help_Id,
+        Tag_Id = tags[2].Tag_Id
+    },
+    new XHaveTag()
+    {
+        XHaveTag_Id = Guid.NewGuid(),
+        X_Id = helps[2].Help_Id,
+        Tag_Id = tags[3].Tag_Id
+    },
+    new XHaveTag()
+    {
+        XHaveTag_Id = Guid.NewGuid(),
+        X_Id = helps[4].Help_Id,
+        Tag_Id = tags[3].Tag_Id
+    },
 };
 
 var userInProjects = new List<UserInProject>()
