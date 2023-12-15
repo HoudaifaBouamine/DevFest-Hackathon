@@ -1,0 +1,107 @@
+.post {
+  height: auto;
+  width: 60%;
+  border-radius: 12px;
+  padding: 3rem 6rem 4rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 48px;
+  background: #fff;
+  margin-left: 30px;
+}
+
+.post:first-child {
+  margin-top: 90px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Nunito;
+  background: #E5E7EB;
+}
+
+.post h1 {
+  color: var(--gray-700, #374151);
+font-size: 31.25px;
+font-weight: 700;
+}
+
+.post .owner .avatar {
+  height: 2.4rem;
+  width: 2.4rem;
+  border-radius: 50%;
+  border: 1px solid purple;
+}
+
+.post .owner h2 {
+  color: #000;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.post .owner h3 {
+  color: rgba(0, 0, 0, 0.40);
+font-size: 0.8rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+} 
+
+.post p {
+  color: rgba(0, 0, 0, 0.40);
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 600;
+line-height: 1.875rem;
+text-indent: 1rem;
+border-left: 0.05rem solid #2454FF;
+padding-left: 2.5rem;
+}
+
+.post .owner {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.post .tags {
+  position: relative;
+  width: 100%;
+}
+
+.post .tags a {
+display: flex;
+padding: 12px 24px;
+background: #00BFFF;
+color: white;
+border-radius: 48px;
+position: absolute;
+top: -5px;
+right: 80px;
+}
+
+.post .owner span {
+  position: absolute;
+  top: -5px;
+  right: 80px;
+  border: 1px solid black;
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 48px;
+  border: 1px solid #00BFFF;
+  color: #00BFFF;
+}

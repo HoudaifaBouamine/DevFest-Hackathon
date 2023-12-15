@@ -14,7 +14,13 @@ namespace DevFest.Api.Data
 
 
         public DbSet<User> Users { get; set; }
-        public DbSet<User> Tag { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<Idea> Ideas { get; set; }
+        public DbSet<Project> Projects { get; set; }
+        public DbSet<UserInProject> UserInProjects { get; set; }
+        public DbSet<Help> Helps { get; set; }
+        public DbSet<XHaveTag> XHaveTags { get; set; }
+
         
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -1,10 +1,14 @@
-﻿using System.Security.Principal;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Security.Principal;
 using static DevFest.Api.Entities.ProjectReadDto;
 
 namespace DevFest.Api.Entities
 {
     public class Project
     {
+        [Key]
+        [Column(nameof(Project_Id))]
         public Guid Project_Id { get; set; }
         public Guid Idea_Id { get; set; }
         public string GithubRepoLink { get; set; } = "";
@@ -29,6 +33,8 @@ namespace DevFest.Api.Entities
     public class UserInProject
     {
         // User to link between users and projects to create M to M relation (Project have many contrubuters but c)
+        [Key]
+        [Column(nameof(UserInProject_Id))]
         public Guid UserInProject_Id { get; set; }
         public Guid User_Id { get; set; }
         public Guid Project_Id { get; set; }
