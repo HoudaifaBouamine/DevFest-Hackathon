@@ -15,15 +15,14 @@ const singup = () => {
   const [password,setPassword] = useState("");
   const loginClickHandler = async (e) => {
     e.preventDefault();
-    try{
+    try{      
     const response = await fetch(`${API_URL}/sign_in`,{
       method: "POST",
       headers : new Headers( { 'ngrok-skip-browser-warning' : '1', 'content-type' : 'application/json' } ),
       body: JSON.stringify({
-        firstName:userName.split(" ")[0],
-        lastName:userName.split(" ")[1],
+        fullName:userName ,
         email:email,
-        password: password
+        password: password,
       }),
     })
     const data = await response.json() ; 
@@ -31,7 +30,7 @@ const singup = () => {
       console.log(data); 
      /* Navigate(`/home/${data.user_Id}`);*/
      }
-    }catch (e) { 
+    }catch(e){ 
       console.log("hello mother fucker");
     }
   };
@@ -45,7 +44,7 @@ const singup = () => {
     <div className='Hero-logIn'>
     <h1 className='Hero-title'>Become a memeber !</h1 >
   <div className='userName'>
-    <p className='usernameParagraph'>Full name</p>     
+    <p className='usernameParagraph'>Association name</p>     
     <input onChange={(event)=>setUser(event.target.value)}  placeholder={"Amine Mazari"} className="input" />
   </div>    
   <div className='userName'>
