@@ -1,0 +1,58 @@
+﻿    public class Tag
+    {
+        public Guid Tag_Id { get; set; }
+        public string Name { get; set; } = "";
+    }
+        public class Help
+    {
+        public Guid Help_Id { get; set; }
+        public Guid Project_Id { get; set; }
+        public string Description { get; set; } = "";
+        public bool StillAvailable { get; set; }
+    }
+
+        public class User
+    {
+
+        public Guid User_Id { get; set; }
+        public string FirstName { get; set; } = "";
+        public string LastName { get; set; } = "";
+        public string Email { get; set; } = "";
+        public string Identity { get; set; } = "";
+        public string HashedPassword { get; set; } = "";
+}
+
+    public class Project
+    {
+        public Guid Project_Id { get; set; }
+        public Guid Idea_Id { get; set; }
+        public string GithubRepoLink { get; set; } = "";
+        public string Description { get; set; } = "";
+        public string Title { get; set; } = "";
+
+    }
+
+        public class Idea
+    {
+        public Guid Idea_Id { get; set; }
+        public string Title { get; set; } = "";
+        public string Description { get; set; } = "";
+        public string Status { get; set; } = "";
+}
+
+public class XHaveTag
+    {
+        // Used to link between a Tag and an object from other tag (help or idea)
+        public Guid XHaveTag_Id { get; set; }
+        public Guid X_Id { get; set; }
+        public Guid Tag_Id { get; set; }
+
+    }
+
+        public class UserInProject
+    {
+        // User to link between users and projects to create M to M relation
+        public Guid UserInProject_Id { get; set; }
+        public Guid User_Id { get; set; }
+        public Guid Project_Id { get; set; }
+    }
