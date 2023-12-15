@@ -8,3 +8,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 )
 
 
+<<<<<<< HEAD
+=======
+
+ReactDOM.createRoot( document.getElementById('root') ).render(
+   
+)
+>>>>>>> b31dd83061818443a333544be9933c3230e4da12
