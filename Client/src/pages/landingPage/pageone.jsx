@@ -9,6 +9,7 @@ import Ellipse172 from "./assets/Ellipse 172.svg"
 import frame1 from "./assets/Frame-1.svg"
 import frame from "./assets/Frame.svg"
 import stare from "./assets/stare shape.svg"
+import Hero from "./assets/Mask group.svg"
 const pageone = () => {
   return (
     <div>
@@ -16,12 +17,17 @@ const pageone = () => {
       <NavBar/>
       <img src={stare} className='stare' />
       <img src={Ellipse172} className='Ellipse172'/>
-     {/* <img src={frame1} className='frame1'/>
-      <img src={Ellipse172} className='Ellipse172'/>
-      <img src={stare} className='stare'/>*/}
+      <img src={Ellipse170} className='Ellipse170'/>
+      <img src={Ellipse171} className='Ellipse171'/>
+      
   <div className='heroPage'>
-        
-      </div>
+  <div className='hero-text'>
+            <h1 className='hero-text1'>Develop <span className='hero-text2'> Peaceful</span> Solutions</h1>
+            <p className='hero-paragraph1'>Collaborate, Donate, and Share Your Ideas! Be a Developer and Contribute to Projects for Peace</p>        
+             <button  className='CTA-button'>Get Started</button>
+          </div>
+          <img src={Hero} className='hero-imag'></img>
+        </div>
     </div>
     </div>
   )
