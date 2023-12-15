@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from '../../compenenet/navBar'
+import NavBar from '../compenenet/navBar'
 import "./style/pageone.css"
 import Ellipse167 from "./assets/Ellipse 167.svg"
 import Ellipse168 from "./assets/Ellipse 168.svg"

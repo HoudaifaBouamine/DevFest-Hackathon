@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from "../assets/logo.svg"
+import Logo from "../../assets/logo.svg"
 import "./styles.css"
 const navBar = () => {
   const GoToLogIn = (e)=>{

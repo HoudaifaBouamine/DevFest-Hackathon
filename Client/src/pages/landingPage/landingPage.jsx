@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from '../../compenenet/navBar'
+import NavBar from '../compenenet/navBar'
 import "./style/landingPage.css"
 import Pageone from './pageone'
 import  Pagetwo from './pagetwo'
@@ -18,7 +18,7 @@ const landingPage = () => {
       <img src={Section4} className='section3' />
       </div>
       <div className='section5'>
-      <img src={Section5} className='section3' />
+      <img src={Section5} className='section3'/>
       </div>
 
  
