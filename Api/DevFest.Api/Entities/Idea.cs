@@ -1,7 +1,12 @@
-﻿namespace DevFest.Api.Entities
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace DevFest.Api.Entities
 {
     public class Idea
     {
+        [Key]
+        [Column(nameof(Idea_Id))]
         public Guid Idea_Id { get; set; }
         public Guid Suggester_Id { get; set; }
         public string Title { get; set; } = "";
