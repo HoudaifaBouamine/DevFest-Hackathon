@@ -3,7 +3,7 @@ import './styles.css'
 
 const SecondaryButton = ({text}) => {
   return (
-      <button  className='secondary-button'>{text}</button>
+      <button  className='secondary-button' >{text}</button>
   )
 }
 

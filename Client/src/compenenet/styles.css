@@ -2,8 +2,30 @@
   font-family: Nunito;
  
 }
+.hero-navbar{
+  z-index: 1;
+display: flex;
+width: 1200px;
+padding: 12px 48px;
+justify-content: space-between;
+align-items: center;
+background: #FFF;
 
-
+/* Drop Down */
+box-shadow: 0px 8px 32px 0px rgba(17, 17, 26, 0.05), 0px 4px 16px 0px rgba(17, 17, 26, 0.05);
+}
+.frame1{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 36px;
+  flex: 1 0 0;
+}
+.logo{
+  width: 40.005px;
+height: 40px;
+flex-shrink: 0;
+}
 .div-test{
   width: 1rem;
   height: 1rem;
@@ -126,6 +148,7 @@ input:valid{
   background-color: transparent;
   border-radius: 0.75rem;
   border: 1px solid #00BFFF;
+  padding: 12px 24px;
 
 }
 

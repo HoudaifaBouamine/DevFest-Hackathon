@@ -23,6 +23,7 @@ const singup = () => {
         fullName:userName ,
         email:email,
         password: password,
+        identity: "association"
       }),
     })
     const data = await response.json() ; 

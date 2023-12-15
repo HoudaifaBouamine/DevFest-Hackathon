@@ -8,7 +8,7 @@ import "../../compenenet/styles.css"
 import { API_URL } from '../../compenenet/urll'
 import { Navigate } from 'react-router-dom'
 
-
+  
 const singup = () => {
   const [userName, setUser] = useState("");
   const [email,setemail] = useState("");
@@ -20,8 +20,7 @@ const singup = () => {
       method: "POST",
       headers : new Headers( { 'ngrok-skip-browser-warning' : '1', 'content-type' : 'application/json' } ),
       body: JSON.stringify({
-        firstName:userName.split(" ")[0],
-        lastName:userName.split(" ")[1],
+        fullName:userName,
         email:email,
         password: password
       }),

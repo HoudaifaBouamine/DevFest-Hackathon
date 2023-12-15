@@ -1,0 +1,13 @@
+.stare{
+    position: absolute;
+    left:35rem;
+    top:9rem;
+    display: flex;
+}
+.Ellipse172{
+    position:absolute;
+    left: 20rem;
+    bottom: 10rem;
+    z-index: 1;
+
+}
