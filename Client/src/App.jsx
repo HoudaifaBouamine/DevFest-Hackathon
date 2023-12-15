@@ -7,14 +7,10 @@ import Projects from './pages/projects/project.jsx'
 import ChooseIdantity from "./pages/singupPage/chooseIdantity.jsx"
 import LandingPage from "./pages/landingPage/landingPage.jsx"
 import Pageone from "./pages/landingPage/pageone.jsx"
-<<<<<<< Updated upstream
+
 import Pagetwo from "./pages/landingPage/pagetwo.jsx"
-function App() {
-  return (
-  <div>
-<LandingPage/>
-  </div>
-=======
+
+
 
 function App() {
   return (
@@ -24,7 +20,6 @@ function App() {
       <Route path="/home" element={<Home />}></Route>
     </Routes>
     </BrowserRouter>
->>>>>>> Stashed changes
   )
 }
 
