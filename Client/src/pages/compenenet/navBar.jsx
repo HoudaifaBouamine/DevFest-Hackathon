@@ -1,15 +1,18 @@
 import React from 'react'
 import Logo from "../../assets/logo.svg"
 import "./styles.css"
+import { useNavigate } from 'react-router-dom'
+
 const navBar = () => {
+  const Navigate = useNavigate("");
   const GoToLogIn = (e)=>{
     e.preventDefault()
-   
+   Navigate("/singIn")
     //the path
   }
   const  GoToSinUp = (e)=>{
     e.preventDefault()
-    
+    Navigate("/SingUp")
     // the path
   }
   return (

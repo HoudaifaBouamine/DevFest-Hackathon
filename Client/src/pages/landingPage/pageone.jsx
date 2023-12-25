@@ -11,7 +11,14 @@ import frame from "./assets/Frame.svg"
 import stare from "./assets/stare shape.svg"
 import Hero from "./assets/Mask group.svg"
 import Pagetwo from "./pagetwo"
+import { useNavigate } from 'react-router-dom'
 const pageone = () => {
+  const Navigate = useNavigate("");
+  const  GoToSinUp = (e)=>{
+    e.preventDefault()
+    Navigate("/SingUp")
+    // the path
+  }
   return (
    
     <div className='section1'>
@@ -28,7 +35,7 @@ const pageone = () => {
   <div className='hero-text'>
             <h1 className='hero-text1'>Develop <span className='hero-text2'> Peaceful</span> Solutions</h1>
             <p className='hero-paragraph1'>Collaborate, Donate, and Share Your Ideas! Be a Developer and Contribute to Projects for Peace</p>        
-             <button  className='CTA-button'>Get Started</button>
+             <button onClick={GoToSinUp} className='CTA-button'>Get Started</button>
           </div>
           <img src={Hero} className='hero-imag'></img>
         </div>

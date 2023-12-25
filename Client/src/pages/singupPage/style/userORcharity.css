@@ -2,21 +2,22 @@
     margin:0; 
     padding: 0;
 }
-.page{
+.page-userORcharity{
     display: inline-flex;
     padding: 78px 401px;
     justify-content: center;
     align-items: center;
     
 }
-.Hero-page{
+.Hero-page-userORcharity{
     display: flex;
+    width: 550px;
     flex-direction: column;
     align-items: center;
     gap: 48px;
     background: #FFF;
 }
-.tite{
+.tite-userORcharity{
     color: #111827;
     text-align: center;
     /* h3 */
@@ -28,12 +29,12 @@
     text-transform: capitalize;
 
 }
-.input-field{
+.input-field-userORcharity{
     display: flex;
     align-items: flex-start;
     gap: 32px;
 }
-.input-field1{
+.input-field1-userORcharity{
     display: flex;
     padding: 12px;
     flex-direction: column;
@@ -45,7 +46,7 @@ background: #FFF;
 /* Drop Down */
 box-shadow: 0px 8px 32px 0px rgba(17, 17, 26, 0.05), 0px 4px 16px 0px rgba(17, 17, 26, 0.05);
 }
-.input-field2{
+.input-field2-userORcharity{
     display: flex;
 padding: 12px;
 flex-direction: column;
@@ -57,43 +58,43 @@ background: #FFF;
 /* Drop Down */
 box-shadow: 0px 8px 32px 0px rgba(17, 17, 26, 0.05), 0px 4px 16px 0px rgba(17, 17, 26, 0.05);
 }
-.inside{
+.inside-userORcharity{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 92px;
 }
 
-.img{
+.img-userORcharity{
     width: 41px;
 height: 35px;
 
 }
-input{
+.input-userORcharity{
    
     accent-color: #00BFFF;
     width: 24px;
 height: 24px;
 }
 
-.big-CTA-button{
-    
+.big-CTA-button-userORcharity{
+    height: 45px;
     width : 185px;
     background-color: #00BFFF;
   }
   
-  .big-CTA-button:hover {
+  .big-CTA-button-userORcharity:hover {
     background: rgba(0, 191, 255, 1);
   }
   
   
-  .big-CTA-button:active {
+  .big-CTA-button-userORcharity:active {
     border-radius: 12px;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.24) 100%), #00BFFF;
     /* Focus Effect */
     box-shadow: 0px 2px 16px 0px rgba(70, 102, 255, 0.50);
   }
-.parag{  
+.parag-userORcharity{  
   color: #111827;
 
 /* medium text */
@@ -113,7 +114,7 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
-.paragraphs{
+.paragraphs-userORcharity{
     display: flex;
 align-items: flex-start;
 gap: var(--borderRadius, 4px);

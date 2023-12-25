@@ -1,4 +1,4 @@
-import { Link, Routes, Route } from 'react-router-dom'
+import { Link, Routes, Route} from 'react-router-dom'
 import img from './image.jpg'
 import './home.css'
 import Post from './postdetail'
