@@ -27,7 +27,10 @@ body{
 .image-side-SingUp{
     width: 50%;
     height: auto;
-    background: #FFF;
+    background-image: url('../assets/sign-language-concept-with-hand-gestures 1.png');
+   /* You can adjust this based on your needs */
+    background-position: center center; /* You can adjust this based on your needs */
+    background-repeat: no-repeat;
 }
 
 .horizontal-line1-SingUp{

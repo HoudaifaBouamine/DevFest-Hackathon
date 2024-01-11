@@ -8,18 +8,16 @@ import Member from "./pages/singupPage/singForMember.jsx"
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LandingPage/>}/>
-        <Route path="/SingIn" element={<SingInPage/>}/>
-        <Route path="/SingUp" element={<UserORcharity/>}/>
-        <Route path="/SingUp/Association" element ={<Association/>}/>
-        <Route path="/SingUp/Member" element ={<Member/>}/>
+    <Routes>
+      <Route path="/" element={<LandingPage/>}/>
+      <Route path="/SingIn" element={<SingInPage/>}/>
+      <Route path="/SingUp" element={<UserORcharity/>}/>
+      <Route path="/SingUp/Association" element ={<Association/>}/>
+      <Route path="/SingUp/Member" element ={<Member/>}/>
+      <Route path="/SingUp/Member/ChooseIdantity" element={<ChooseIdantity/>}/>
 
-        <Route path="/SingUp/Member/ChooseIdantity" element={<ChooseIdantity/>}/>
-
-         </Routes>
-    </BrowserRouter>
-   
+       </Routes>
+  </BrowserRouter>
   )
 }
 

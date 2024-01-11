@@ -21,6 +21,9 @@ body {
 
 .image-side-singInPage {
     width: 50%;
-    height: 644px;
-    background: #FFF;
+    height: 604px;
+    background-image: url('../assets/Rectangle 9.png');
+    background-size:   640px ; /* You can adjust this based on your needs */
+    background-position: center center; /* You can adjust this based on your needs */
+    background-repeat: no-repeat;
 }

@@ -1,11 +1,15 @@
+
 .split-container-chooseIdantity{
     display: flex;
     height: 560px;
 }
 .image-side-chooseIdantity{
     width: 50%;
-    height: auto;
-    background: #FFF;
+    height: 600px;
+    background-image: url('../assets/Asset 114x 1.svg');
+/* You can adjust this based on your needs */
+    background-position: center ; /* You can adjust this based on your needs */
+    background-repeat: no-repeat;
 }
 .color-side-chooseIdantity{
     background: var(--gray-100, #F3F4F6);

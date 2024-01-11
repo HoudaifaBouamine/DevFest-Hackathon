@@ -2,7 +2,9 @@
     margin:0; 
     padding: 0;
 }
+
 .page-userORcharity{
+    background-color: white;
     display: inline-flex;
     padding: 78px 401px;
     justify-content: center;
