@@ -25,7 +25,7 @@ namespace DevFest.Api.Entities
         }
     }
 
-    public class HelpReadDto
+    public class HelpInBusinessLayer
     {
         public Guid Help_Id { get; set; }
         public Guid Project_Id { get; set; }
@@ -33,7 +33,7 @@ namespace DevFest.Api.Entities
         public bool StillAvailable { get; set; }
         public List<Tag> Tags { get; set; } = new List<Tag>();
 
-        public HelpReadDto(Help help,List<XHaveTag> helpHaveTags,List<Tag> tags) 
+        public HelpInBusinessLayer(Help help,List<XHaveTag> helpHaveTags,List<Tag> tags) 
         {
             Help_Id = help.Help_Id;
             Project_Id = help.Project_Id;

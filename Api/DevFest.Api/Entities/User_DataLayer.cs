@@ -3,10 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DevFest.Api.Entities
 {
-    public class User
+    public class User_DataLayer
     {
-        [Key]
-        [Column(nameof(User_Id))]
+
         public Guid User_Id { get; set; }
         public string FirstName { get; set; } = "";
         public string LastName { get; set; } = "";
@@ -15,17 +14,38 @@ namespace DevFest.Api.Entities
         public string HashedPassword { get; set; } = "";
 
 
-        public static List<UserReadDto> UsersToDtos(List<User> users)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public static List<UserInBusinessLayer> UsersToDtos(List<User_DataLayer> users)
         {
-            return (from u in users select new UserReadDto(u)).ToList();
+            return (from u in users select new UserInBusinessLayer(u)).ToList();
         }
 
-        public User()
+        public User_DataLayer()
         {
             
         }
 
-        public User(UserCreateDto userCreateDto)
+        public User_DataLayer(UserCreateDto userCreateDto)
         {
             User_Id = Guid.NewGuid();
             FirstName = userCreateDto.FullName.Split(" ")[0];
@@ -44,7 +64,7 @@ namespace DevFest.Api.Entities
 
     }
 
-    public class UserReadDto
+    public class UserInBusinessLayer
     {
 
         public Guid User_Id { get; set; }
@@ -52,7 +72,13 @@ namespace DevFest.Api.Entities
         public string Email { get; set; } = "";
         public string Identity { get; set; } = "";
 
-        public UserReadDto(User user)
+
+
+
+
+
+
+        public UserInBusinessLayer(User_DataLayer user)
         {
             User_Id = user.User_Id;
             FullName = user.FirstName + " " + user.LastName;

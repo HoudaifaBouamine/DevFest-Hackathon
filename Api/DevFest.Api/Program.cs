@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.TagHelpers;
 using System.Security.Principal;
-using static DevFest.Api.Entities.ProjectReadDto;
+using static DevFest.Api.Entities.ProjectInBussinessLayer;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,36 +34,36 @@ app.UseCors("AllowAllOrigins");
 
 app.MapPost("/login", ([FromBody] UserLoginDto user, AppDbContext db) =>
 {
-    User? theUser = db.Users.ToList().Where(u=>u.Email == user.Email).FirstOrDefault();
+    User_DataLayer? theUser = db.Users.ToList().Where(u=>u.Email == user.Email).FirstOrDefault();
 
     if (theUser is null || theUser.HashedPassword != user.Password)  // the password must be hashed in the real program
     {
         return Results.BadRequest("Failed To Login (Email does not exist or password is wrong)");
     }
 
-    UserReadDto userReadDto = new UserReadDto(theUser);
+    UserInBusinessLayer userReadDto = new UserInBusinessLayer(theUser);
 
     return Results.Ok(userReadDto);
 });
 
 app.MapPost("/sign_in", ([FromBody] UserCreateDto createDto, AppDbContext db) =>
 {
-    var user = new User(createDto);
+    var user = new User_DataLayer(createDto);
     db.Users.Add(user);
     // (To Do) Must Verify that email is unique
 
     db.SaveChanges();
-    return new UserReadDto(user);
+    return new UserInBusinessLayer(user);
 });
 
 app.MapGet("/Users",(AppDbContext db) => 
 {
-    return User.UsersToDtos(db.Users.ToList());
+    return User_DataLayer.UsersToDtos(db.Users.ToList());
 });
 
 app.MapGet("/Users/{user_Id}", (Guid user_Id, AppDbContext db) =>
 {
-    var userRead = User.UsersToDtos(db.Users.ToList()).Where(u => u.User_Id == user_Id);
+    var userRead = User_DataLayer.UsersToDtos(db.Users.ToList()).Where(u => u.User_Id == user_Id);
 
     if(userRead == null)
     {
@@ -145,7 +145,7 @@ app.MapPost("/Projects", ([FromBody] ProjectCreateDto projectCreateDto, AppDbCon
         return Results.BadRequest("Failed to create project because User is not Found");
     }
 
-    var projectCreated = new Project(projectCreateDto);
+    var projectCreated = new ProjectInDataLayer(projectCreateDto);
     db.Projects.Add(projectCreated);
 
     db.UserInProjects.Add(new UserInProject()
@@ -182,12 +182,12 @@ app.MapGet("/Projects/{project_Id}", (Guid project_Id, AppDbContext db) =>
 
 app.MapGet("/helps",(AppDbContext db) =>
 {
-    return from h in db.Helps.ToList() select new HelpReadDto(h,db.XHaveTags.ToList(),db.Tags.ToList());
+    return from h in db.Helps.ToList() select new HelpInBusinessLayer(h,db.XHaveTags.ToList(),db.Tags.ToList());
 });
 
 app.MapGet("/helps/tag/{tag_id}", (Guid tag_id,AppDbContext db) =>
 {
-    var help = (from h in db.Helps.ToList() select new HelpReadDto(h, db.XHaveTags.ToList(), db.Tags.ToList())).Where(h => (h.Tags.Where(t=>t.Tag_Id == tag_id).Count() > 0));
+    var help = (from h in db.Helps.ToList() select new HelpInBusinessLayer(h, db.XHaveTags.ToList(), db.Tags.ToList())).Where(h => (h.Tags.Where(t=>t.Tag_Id == tag_id).Count() > 0));
 
     if(help == null)
     {
@@ -221,7 +221,7 @@ app.MapPost("/helps", ([FromBody] HelpCreateDto helpCreateDto, AppDbContext db) 
 
     db.SaveChanges();
 
-    return Results.Ok( new HelpReadDto(createdHelp,db.XHaveTags.ToList(),db.Tags.ToList()) );
+    return Results.Ok( new HelpInBusinessLayer(createdHelp,db.XHaveTags.ToList(),db.Tags.ToList()) );
 });
 
 
@@ -233,10 +233,10 @@ IdeaReadDto? GetIdeaReadDto(Idea idea, AppDbContext db)
         .Where(i => i.Idea_Id == idea.Idea_Id)
         .FirstOrDefault();
 }
-List<ProjectReadDto> GetProjectsReadDtos(AppDbContext db)
+List<ProjectInBussinessLayer> GetProjectsReadDtos(AppDbContext db)
 {
     return  (from p in db.Projects.ToList()
-               select new ProjectReadDto(
+               select new ProjectInBussinessLayer(
                    p, db.UserInProjects.ToList()!, db.Users.ToList()!,
                    db.Helps.ToList()!, db.XHaveTags.ToList()!, db.Tags.ToList()!))
                   .ToList();

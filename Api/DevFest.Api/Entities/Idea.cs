@@ -13,8 +13,8 @@ namespace DevFest.Api.Entities
         public string Description { get; set; } = "";
         public string Status { get; set; } = "";
 
-        public static List<IdeaReadDto> IdeasToDtos(List<Idea> ideas,List<Project> projects,
-            List<UserInProject> userInProjects, List<User> users,List<Help> helps,
+        public static List<IdeaReadDto> IdeasToDtos(List<Idea> ideas,List<ProjectInDataLayer> projects,
+            List<UserInProject> userInProjects, List<User_DataLayer> users,List<Help> helps,
             List<XHaveTag> ideaHaveTags, List<Tag> tags, List<XHaveTag> helpHaveTags)
         {
             return (from i in ideas 
@@ -51,15 +51,15 @@ namespace DevFest.Api.Entities
     public class IdeaReadDto
     {
         public Guid Idea_Id { get; set; }
-        public UserReadDto Suggester { get; set; }
+        public UserInBusinessLayer Suggester { get; set; }
         public string Title { get; set; } = "";
         public string Description { get; set; } = "";
         public string Status { get; set; } = "";
         public List<Tag> Tags { get; set; } = new List<Tag>();
-        public ProjectReadDto? Project { get; set; } = null;
+        public ProjectInBussinessLayer? Project { get; set; } = null;
 
-        public IdeaReadDto(Idea idea,List<Project> projects,List<UserInProject> userInProjects,
-            List<User> users,List<Help> helps,
+        public IdeaReadDto(Idea idea,List<ProjectInDataLayer> projects,List<UserInProject> userInProjects,
+            List<User_DataLayer> users,List<Help> helps,
             List<XHaveTag> ideaHaveTags,List<Tag> tags,
             List<XHaveTag> helpHaveTags)
         {
@@ -67,11 +67,11 @@ namespace DevFest.Api.Entities
             Title = idea.Title;
             Description = idea.Description;
             Status = idea.Status;
-            Suggester = (from u in users where u.User_Id == idea.Suggester_Id select new UserReadDto(u)).FirstOrDefault() ;
+            Suggester = (from u in users where u.User_Id == idea.Suggester_Id select new UserInBusinessLayer(u)).FirstOrDefault() ;
 
             Project = (from p in projects 
                        where p.Idea_Id == idea.Idea_Id 
-                       select new ProjectReadDto(p,userInProjects,users,helps,helpHaveTags,tags))
+                       select new ProjectInBussinessLayer(p,userInProjects,users,helps,helpHaveTags,tags))
                        .FirstOrDefault();
 
             Tags = (from iht in ideaHaveTags
