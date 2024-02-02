@@ -3,34 +3,37 @@
     padding: 0;
 }
 
-body {
+body{
     margin: 0;
     padding: 0;
     overflow: hidden;    
 }
 
-.split-container {
+.split-container-SingUp {
     display: flex;
-    height: 610px;
+    height: 560px;
 }
 
-.color-side {
+.color-side-SingUp {
     background: var(--gray-100, #F3F4F6);
     flex: 1;
     width: 50%;
-    height: 100%;
+    height:auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.image-side {
+.image-side-SingUp{
     width: 50%;
-    height: 644px;
-    background: #FFF;
+    height: auto;
+    background-image: url('../assets/sign-language-concept-with-hand-gestures 1.png');
+   /* You can adjust this based on your needs */
+    background-position: center center; /* You can adjust this based on your needs */
+    background-repeat: no-repeat;
 }
 
-.horizontal-line1{
+.horizontal-line1-SingUp{
     display: inline-block;
     width: 94.667px;
     height: 0.2px;
@@ -38,10 +41,10 @@ body {
     background: #808080;
     margin-right: 10px; /* Adjust the spacing between the line and text as needed */
 }
-.Hero-logIn{
+.Hero-logIn-SingUp{
     display: flex;
-    width: 315px;
-    height: 450px;
+    width: 400px;
+    height: 570px;
     padding: 48px 48px;
     flex-direction: column;
     align-items: flex-start;
@@ -55,7 +58,7 @@ box-shadow: 0px 8px 32px 0px rgba(17, 17, 26, 0.05), 0px 4px 16px 0px rgba(17, 1
     /* ShadowX */
     box-shadow: 0px 8px 32px 0px rgba(17, 17, 26, 0.05), 0px 4px 16px 0px rgba(17, 17, 26, 0.05);
 }
-.Hero-title{
+.Hero-title-SingUp{
     color: #00BFFF;
 
     /* Sub Heading */
@@ -67,7 +70,7 @@ box-shadow: 0px 8px 32px 0px rgba(17, 17, 26, 0.05), 0px 4px 16px 0px rgba(17, 1
     width: 292px;
 }
 
-.userName{
+.userName-SingUp{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -75,7 +78,7 @@ box-shadow: 0px 8px 32px 0px rgba(17, 17, 26, 0.05), 0px 4px 16px 0px rgba(17, 1
     align-self: stretch;
     border-radius: 12px;
 }
-.usernameParagraph{
+.usernameParagraph-SingUp{
     display: flex;
     align-items: center;
     gap: 2px;
@@ -90,7 +93,7 @@ font-weight: 400;
 line-height: normal;
 }
 
-.PasswordParagraph {
+.PasswordParagraph-SingUp {
     display: flex;
     align-items: center;
     gap: 2px;
@@ -103,7 +106,7 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
-.Password{
+.Password-SingUp{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -112,7 +115,7 @@ line-height: normal;
     border-radius: 12px;
 
 }
-.logInButton{
+.logInButton-SingUp{
     display: flex;
     padding: 12px 24px;
     justify-content: center;
@@ -122,7 +125,7 @@ line-height: normal;
     border-radius: 12px;
 background: #00BFFF;  
 }
-.forgotPas{
+.forgotPas-SingUp{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,7 +140,7 @@ background: #00BFFF;
     line-height: normal;
     padding: 0px 0px;
 }
-.forgotPasSection{    
+.forgotPasSection-SingUp{    
     display: flex;
 width: 292px;
 flex-direction: column;
@@ -145,14 +148,14 @@ justify-content: center;
 align-items: flex-end;
 gap: 10px;
 }
-.container{
+.container-SingUp{
     display: flex;
     align-items: center;
     gap: 4px;
     align-self: stretch;
     
 }
-.or{
+.or-SingUp{
     padding: 0;
     color: #808080;
     text-align: center;
@@ -164,14 +167,14 @@ gap: 10px;
     font-weight: 400;
     line-height: normal;
 }
-.noAccount{
+.noAccount-SingUp{
     display: flex;
 width: 292px;
 justify-content: center;
 align-items: center;
 gap: 6px;
 }
-.noAccountParagraph{
+.noAccountParagraph-SingUp{
     color: #808080;
     text-align: center;
     
@@ -182,7 +185,7 @@ gap: 6px;
     font-weight: 400;
     line-height: normal;
 }
-.noAccountParagraph2{
+.noAccountParagraph2-SingUp{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -198,3 +201,21 @@ font-weight: 400;
 line-height: normal;
 padding: 0px 0px ;  
 }
+
+.big-CTA-button-SingUp{
+    height: 40px;
+    width :100%;
+    background-color: #00BFFF;
+  }
+  
+  .big-CTA-button-SingUp:hover {
+    background: rgba(0, 191, 255, 1);
+  }
+  
+  
+  .big-CTA-button-SingUp:active {
+    border-radius: 12px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.24) 100%), #00BFFF;
+    /* Focus Effect */
+    box-shadow: 0px 2px 16px 0px rgba(70, 102, 255, 0.50);
+  }

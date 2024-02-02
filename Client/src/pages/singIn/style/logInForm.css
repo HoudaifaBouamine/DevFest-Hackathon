@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
 }
-.horizontal-line1{
+.horizontal-line1-singInPage{
     display: inline-block;
     width: 94.667px;
     height: 0.2px;
@@ -10,9 +10,9 @@
     background: #808080;
     margin-right: 10px; /* Adjust the spacing between the line and text as needed */
 }
-.Hero-logIn{
+.Hero-logIn-singInPage{
     display: flex;
-    width: 300px;   
+    width: 390px;   
     padding: 48px;
     flex-direction: column;
     align-items: flex-start;
@@ -24,7 +24,7 @@
     /* ShadowX */
     box-shadow: 0px 8px 32px 0px rgba(17, 17, 26, 0.05), 0px 4px 16px 0px rgba(17, 17, 26, 0.05);
 }
-.Hero-title{
+.Hero-title-singInPage{
     color: #00BFFF;
 
     /* Sub Heading */
@@ -36,7 +36,7 @@
     width: 292px;
 }
 
-.userName{
+.userName-singInPage{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -44,7 +44,7 @@
     align-self: stretch;
     border-radius: 12px;
 }
-.usernameParagraph{
+.usernameParagraph-singInPage{
     display: flex;
     align-items: center;
     gap: 4px;
@@ -59,7 +59,7 @@ font-weight: 400;
 line-height: normal;
 }
 
-.PasswordParagraph {
+.PasswordParagraph-singInPage {
     display: flex;
     align-items: center;
     gap: 4px;
@@ -72,7 +72,7 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
-.Password{
+.Password-singInPage{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -81,7 +81,7 @@ line-height: normal;
     border-radius: 12px;
 
 }
-.logInButton{
+.logInButton-singInPage{
     display: flex;
     padding: 12px 24px;
     justify-content: center;
@@ -91,7 +91,7 @@ line-height: normal;
     border-radius: 12px;
 background: #00BFFF;  
 }
-.forgotPas{
+.forgotPas-singInPage{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,7 +106,7 @@ background: #00BFFF;
     line-height: normal;
     padding: 0px 0px;
 }
-.forgotPasSection{    
+.forgotPasSection-singInPage{    
     display: flex;
 width: 292px;
 flex-direction: column;
@@ -114,14 +114,14 @@ justify-content: center;
 align-items: flex-end;
 gap: 10px;
 }
-.container{
+.container-singInPage{
     display: flex;
     align-items: center;
     gap: 4px;
     align-self: stretch;
     
 }
-.or{
+.or-singInPage{
     padding: 0;
     color: #808080;
     text-align: center;
@@ -133,14 +133,14 @@ gap: 10px;
     font-weight: 400;
     line-height: normal;
 }
-.noAccount{
+.noAccount-singInPage{
     display: flex;
 width: 292px;
 justify-content: center;
 align-items: center;
 gap: 6px;
 }
-.noAccountParagraph{
+.noAccountParagraph-singInPage{
     color: #808080;
     text-align: center;
     
@@ -151,7 +151,7 @@ gap: 6px;
     font-weight: 400;
     line-height: normal;
 }
-.noAccountParagraph2{
+.noAccountParagraph2-singInPage{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,3 +167,21 @@ font-weight: 400;
 line-height: normal;
 padding: 0px 0px ;  
 }
+
+.big-CTA-button-singInPage{
+    height: 45px;
+    width :100%;
+    background-color: #00BFFF;
+  }
+  
+  .big-CTA-button-singInPage:hover {
+    background: rgba(0, 191, 255, 1);
+  }
+  
+  
+  .big-CTA-button-singInPage:active {
+    border-radius: 12px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.24) 100%), #00BFFF;
+    /* Focus Effect */
+    box-shadow: 0px 2px 16px 0px rgba(70, 102, 255, 0.50);
+  }

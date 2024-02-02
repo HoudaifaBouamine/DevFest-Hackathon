@@ -4,14 +4,14 @@ import LogInForm from "./form"
 const SingInPage = () => {
   return (
     <div>
-      <div className="split-container"> 
-      <div className="image-side">
+      <div className="split-container-singInPage"> 
+      <div className="image-side-singInPage">
 
 
       </div>
-      <div className="color-side">
-       
-      <LogInForm></LogInForm>
+      <div className="color-side-singInPage">
+   
+      <LogInForm />
       </div>    
       </div>
   </div>
